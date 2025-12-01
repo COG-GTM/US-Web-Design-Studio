@@ -264,23 +264,17 @@ export default function PitchDeck() {
               We&apos;ve proven the approach works. The next step is a 30-day pilot across 3-5 flagship agency sites.
             </p>
 
-            <div className="flex flex-wrap gap-4">
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-base font-medium">
-                Schedule Briefing
-              </Button>
-              <a 
-                href="https://github.com/COG-GTM/US-Web-Design-Studio/pull/2"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button 
-                  variant="outline" 
-                  className="border-[#444] text-white hover:bg-white/10 rounded-full px-8 py-6 text-base"
-                >
-                  View the Code
-                </Button>
-              </a>
-            </div>
+                        <a 
+                          href="https://github.com/COG-GTM/US-Web-Design-Studio/pull/2"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button 
+                            className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-base font-medium"
+                          >
+                            View the Code
+                          </Button>
+                        </a>
           </div>
         </div>
       </section>
