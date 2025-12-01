@@ -16,9 +16,9 @@ export default function PitchDeck() {
             height={24}
             className="opacity-90"
           />
-          <span className="text-[13px] text-gray-300 tracking-wide">
-            AN OFFICIAL WEBSITE OF THE UNITED STATES GOVERNMENT
-          </span>
+                    <span className="text-[13px] text-gray-300 tracking-wide">
+                      AN OFFICIAL PARTNER OF THE UNITED STATES GOVERNMENT
+                    </span>
         </div>
       </div>
 
@@ -36,12 +36,13 @@ export default function PitchDeck() {
               </a>
             </p>
           </div>
-          <Button 
-            className="bg-white text-black hover:bg-gray-200 rounded-full px-6 py-2 text-sm font-medium"
-            onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            Get Started
-          </Button>
+                    <Image
+                      src="/us-flag.png"
+                      alt="U.S. Flag"
+                      width={48}
+                      height={48}
+                      className="opacity-90"
+                    />
         </div>
       </header>
 
@@ -88,29 +89,67 @@ export default function PitchDeck() {
         </div>
       </section>
 
-      {/* Large Logo Section */}
-      <section className="py-16 px-6 overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-center gap-8">
-            <span className="text-[8rem] md:text-[12rem] font-bold tracking-tighter text-white/10">
-              US
-            </span>
-            <Image
-              src="/us-flag.png"
-              alt="U.S. Flag"
-              width={120}
-              height={120}
-              className="opacity-80"
-            />
-            <span className="text-[8rem] md:text-[12rem] font-bold tracking-tighter text-white/10">
-              WDS
-            </span>
-          </div>
-        </div>
-      </section>
+            {/* USDS + Cognition AI Section */}
+            <section className="py-24 px-6">
+              <div className="max-w-7xl mx-auto">
+                <div className="grid md:grid-cols-2 gap-16 items-center">
+                  <div>
+                    <h2 className="text-[2.5rem] md:text-[3rem] leading-[1.1] font-normal text-white mb-8">
+                      USDS + Cognition AI
+                    </h2>
+                    <p className="text-xl text-gray-400 leading-relaxed mb-6">
+                      The U.S. Digital Service sets the standard for how government serves citizens online. 
+                      Cognition AI brings Devin — the world&apos;s first AI software engineer — to accelerate that mission.
+                    </p>
+                    <p className="text-xl text-gray-400 leading-relaxed">
+                      Together, we can modernize federal websites at unprecedented speed while maintaining 
+                      the accessibility, security, and compliance standards that Americans deserve.
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="flex items-center justify-center gap-6 mb-8">
+                        <span className="text-[4rem] md:text-[5rem] font-bold tracking-tighter text-white/80">
+                          USDS
+                        </span>
+                        <span className="text-[2rem] text-gray-500">+</span>
+                        <span className="text-[4rem] md:text-[5rem] font-bold tracking-tighter text-white/80">
+                          Devin
+                        </span>
+                      </div>
+                      <p className="text-gray-500 text-sm">Powered by Cognition AI</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-      {/* Divider */}
-      <div className="border-t border-[#333]" />
+            {/* Divider */}
+            <div className="border-t border-[#333]" />
+
+            {/* Large Logo Section */}
+            <section className="py-16 px-6 overflow-hidden">
+              <div className="max-w-7xl mx-auto">
+                <div className="flex items-center justify-center gap-8">
+                  <span className="text-[8rem] md:text-[12rem] font-bold tracking-tighter text-white/10">
+                    US
+                  </span>
+                  <Image
+                    src="/us-flag.png"
+                    alt="U.S. Flag"
+                    width={120}
+                    height={120}
+                    className="opacity-80"
+                  />
+                  <span className="text-[8rem] md:text-[12rem] font-bold tracking-tighter text-white/10">
+                    WDS
+                  </span>
+                </div>
+              </div>
+            </section>
+
+            {/* Divider */}
+            <div className="border-t border-[#333]" />
 
       {/* What We Built Section */}
       <section className="py-24 px-6">
@@ -222,7 +261,7 @@ export default function PitchDeck() {
             </h2>
             
             <p className="text-xl text-gray-400 mb-12 leading-relaxed">
-              We&apos;ve proven the approach works. The next step is a 90-day pilot across 3-5 flagship agency sites.
+              We&apos;ve proven the approach works. The next step is a 30-day pilot across 3-5 flagship agency sites.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -278,15 +317,15 @@ export default function PitchDeck() {
               height={24}
               className="opacity-90"
             />
-            <span className="text-[13px] text-gray-300 tracking-wide">
-              AN OFFICIAL WEBSITE OF THE UNITED STATES GOVERNMENT
-            </span>
-          </div>
-          <div className="text-[13px] text-gray-400">
-            USWDS MODERNIZATION INITIATIVE
-          </div>
-        </div>
-      </footer>
+                  <span className="text-[13px] text-gray-300 tracking-wide">
+                    AN OFFICIAL PARTNER OF THE UNITED STATES GOVERNMENT
+                  </span>
+                </div>
+                <div className="text-[13px] text-gray-400">
+                  USWDS MODERNIZATION INITIATIVE
+                </div>
+              </div>
+            </footer>
     </main>
   );
 }
