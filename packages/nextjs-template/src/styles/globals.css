@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * USWDS 4.0 Global Styles
+ *
+ * This file imports Tailwind CSS and provides base styles
+ * that complement USWDS design tokens.
+ */
+
+@layer base {
+  :root {
+    /* USWDS Focus Outline */
+    --uswds-focus-outline: 0.25rem solid #2491ff;
+    --uswds-focus-offset: 0;
+  }
+
+  /* Base typography using USWDS font family */
+  body {
+    @apply font-uswds-sans text-uswds-ink antialiased;
+  }
+
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    outline: var(--uswds-focus-outline);
+    outline-offset: var(--uswds-focus-offset);
+  }
+
+  /* Skip link styles */
+  .usa-skipnav {
+    @apply absolute left-0 top-0 z-50 -translate-y-full bg-uswds-primary px-uswds-2 py-uswds-1 text-white transition-transform focus:translate-y-0;
+  }
+}
+
+@layer components {
+  /* USWDS Button Base */
+  .usa-button {
+    @apply inline-flex items-center justify-center rounded-uswds-md bg-uswds-primary px-uswds-3 py-uswds-105 font-uswds-sans text-uswds-sm font-bold text-white transition-colors hover:bg-uswds-primary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-uswds-primary disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .usa-button--secondary {
+    @apply bg-uswds-secondary hover:bg-uswds-secondary-dark;
+  }
+
+  .usa-button--outline {
+    @apply border-2 border-uswds-primary bg-transparent text-uswds-primary hover:border-uswds-primary-dark hover:text-uswds-primary-dark;
+  }
+
+  /* USWDS Alert Base */
+  .usa-alert {
+    @apply border-l-4 p-uswds-2;
+  }
+
+  .usa-alert--info {
+    @apply border-uswds-info bg-uswds-info-lighter;
+  }
+
+  .usa-alert--success {
+    @apply border-uswds-success bg-uswds-success-lighter;
+  }
+
+  .usa-alert--warning {
+    @apply border-uswds-warning bg-uswds-warning-lighter;
+  }
+
+  .usa-alert--error {
+    @apply border-uswds-error bg-uswds-error-lighter;
+  }
+
+  /* USWDS Card */
+  .usa-card {
+    @apply rounded-uswds-lg border border-uswds-base-lighter bg-white shadow-uswds-2;
+  }
+
+  .usa-card__header {
+    @apply border-b border-uswds-base-lighter p-uswds-3;
+  }
+
+  .usa-card__body {
+    @apply p-uswds-3;
+  }
+
+  .usa-card__footer {
+    @apply border-t border-uswds-base-lighter p-uswds-3;
+  }
+
+  /* USWDS Container */
+  .usa-container {
+    @apply mx-auto max-w-uswds-desktop px-uswds-3;
+  }
+
+  /* USWDS Section */
+  .usa-section {
+    @apply py-uswds-6;
+  }
+
+  /* USWDS Grid */
+  .usa-grid {
+    @apply grid gap-uswds-3;
+  }
+}
+
+@layer utilities {
+  /* USWDS specific utilities */
+  .text-uswds-link {
+    @apply text-uswds-primary underline hover:text-uswds-primary-dark;
+  }
+
+  .bg-uswds-body {
+    @apply bg-white;
+  }
+
+  .border-uswds {
+    @apply border border-uswds-base-lighter;
+  }
+}
