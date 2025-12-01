@@ -1,5 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ToastDemo } from "@/components/ui/toast-demo";
 
 export default function Home() {
   return (
@@ -70,6 +87,119 @@ export default function Home() {
               </AlertDescription>
             </Alert>
           </div>
+        </section>
+
+        <section className="mb-uswds-6">
+          <h2 className="mb-uswds-3 text-uswds-2xl font-bold">
+            Accordion Example
+          </h2>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="item-1">
+              <AccordionTrigger>What is USWDS?</AccordionTrigger>
+              <AccordionContent>
+                The U.S. Web Design System (USWDS) is a design system for the
+                federal government. It provides a library of open source UI
+                components and a visual style guide for U.S. federal government
+                websites.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>Why use this template?</AccordionTrigger>
+              <AccordionContent>
+                This template provides a modern Next.js implementation of USWDS,
+                combining the design system&apos;s accessibility and visual
+                standards with modern React patterns, Tailwind CSS utilities,
+                and Radix UI primitives.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>Is this template accessible?</AccordionTrigger>
+              <AccordionContent>
+                Yes! This template is built with accessibility as a core
+                requirement. It uses Radix UI primitives which provide built-in
+                accessibility features, and follows WCAG 2.0 AA and Section 508
+                compliance guidelines.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </section>
+
+        <section className="mb-uswds-6">
+          <h2 className="mb-uswds-3 text-uswds-2xl font-bold">Dialog Example</h2>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button>Open Dialog</Button>
+            </DialogTrigger>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle>Confirm Action</DialogTitle>
+                <DialogDescription>
+                  This is a USWDS-styled dialog built with Radix UI. It includes
+                  proper focus management, keyboard navigation, and screen
+                  reader support.
+                </DialogDescription>
+              </DialogHeader>
+              <DialogFooter>
+                <Button variant="outline">Cancel</Button>
+                <Button>Confirm</Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
+        </section>
+
+        <section className="mb-uswds-6">
+          <h2 className="mb-uswds-3 text-uswds-2xl font-bold">Tabs Example</h2>
+          <Tabs defaultValue="overview" className="w-full">
+            <TabsList>
+              <TabsTrigger value="overview">Overview</TabsTrigger>
+              <TabsTrigger value="features">Features</TabsTrigger>
+              <TabsTrigger value="documentation">Documentation</TabsTrigger>
+            </TabsList>
+            <TabsContent value="overview">
+              <div className="rounded-uswds-md border border-uswds-base-lighter p-uswds-3">
+                <h3 className="mb-uswds-2 font-uswds-sans text-uswds-lg font-bold">
+                  Overview
+                </h3>
+                <p className="font-uswds-sans text-uswds-sm text-uswds-base-dark">
+                  USWDS 4.0 introduces a modern Next.js template that enables
+                  government agencies to build accessible, performant web
+                  applications using contemporary frontend technologies.
+                </p>
+              </div>
+            </TabsContent>
+            <TabsContent value="features">
+              <div className="rounded-uswds-md border border-uswds-base-lighter p-uswds-3">
+                <h3 className="mb-uswds-2 font-uswds-sans text-uswds-lg font-bold">
+                  Features
+                </h3>
+                <ul className="list-inside list-disc space-y-uswds-1 font-uswds-sans text-uswds-sm text-uswds-base-dark">
+                  <li>Next.js 14+ with App Router</li>
+                  <li>Tailwind CSS with USWDS design tokens</li>
+                  <li>Radix UI accessible primitives</li>
+                  <li>Sonner toast notifications</li>
+                </ul>
+              </div>
+            </TabsContent>
+            <TabsContent value="documentation">
+              <div className="rounded-uswds-md border border-uswds-base-lighter p-uswds-3">
+                <h3 className="mb-uswds-2 font-uswds-sans text-uswds-lg font-bold">
+                  Documentation
+                </h3>
+                <p className="font-uswds-sans text-uswds-sm text-uswds-base-dark">
+                  Visit the USWDS documentation at designsystem.digital.gov for
+                  comprehensive guides, component references, and best
+                  practices.
+                </p>
+              </div>
+            </TabsContent>
+          </Tabs>
+        </section>
+
+        <section className="mb-uswds-6">
+          <h2 className="mb-uswds-3 text-uswds-2xl font-bold">
+            Toast Notifications
+          </h2>
+          <ToastDemo />
         </section>
 
         <section>
